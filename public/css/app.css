@@ -85,3 +85,34 @@ label{
 .form-control{
     min-width: 200px;
 }
+
+.border{
+    border: solid 3px #EEBA30;
+    border-radius: 10px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: center;
+}
+
+.grid p {
+    font-size: 2rem;
+    padding: 0 30px;
+    margin-bottom: 0;
+}
+
+.grid span{
+    font-size: 3rem;
+    font-weight: bold;
+}
+img{
+    width: 100%;
+}
+
+.item-large{
+    grid-row: span 2;
+    padding: 15px;
+}
