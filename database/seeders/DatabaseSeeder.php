@@ -18,9 +18,6 @@ class DatabaseSeeder extends Seeder
     	// Je kunt hier je eigen seeders invoegen:
         //
 
-
-        
-
         //Tournament 1
         $tournament = new Tournament();
         $tournament->name = "EK Zwerkbal " . date('Y');
