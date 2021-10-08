@@ -26,7 +26,7 @@ class TeamController extends Controller
      */
     public function create()
     {
-        //
+        return view('teams/create');
     }
 
     /**
@@ -37,7 +37,19 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'type'=>'required',
+            'origin'=>'required'
+        ]);
+
+        $team = new team();
+        $team->name = $request->name;
+        $team->type = $request->type;
+        $team->origin = $request->origin;
+        $team->save();
+        
+        return redirect()->route('teams.index');
     }
 
     /**
@@ -59,7 +71,8 @@ class TeamController extends Controller
      */
     public function edit(Team $team)
     {
-        //
+        return view('teams/edit')
+                ->with('team', $team);
     }
 
     /**
@@ -71,7 +84,19 @@ class TeamController extends Controller
      */
     public function update(Request $request, Team $team)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'type'=>'required',
+            'origin'=>'required'
+        ]);
+
+        $team = new team();
+        $team->name = $request->name;
+        $team->type = $request->type;
+        $team->origin = $request->origin;
+        $team->save();
+        
+        return redirect()->route('teams.index');
     }
 
     /**
