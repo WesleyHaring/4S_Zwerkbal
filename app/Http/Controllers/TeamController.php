@@ -90,7 +90,6 @@ class TeamController extends Controller
             'origin'=>'required'
         ]);
 
-        $team = new team();
         $team->name = $request->name;
         $team->type = $request->type;
         $team->origin = $request->origin;
